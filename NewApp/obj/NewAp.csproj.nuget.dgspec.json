@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PTPMQL_02\\NewAp\\NewAp.csproj": {}
+    "D:\\PTPMQL_02\\NewApp\\NewAp.csproj": {}
   },
   "projects": {
-    "D:\\PTPMQL_02\\NewAp\\NewAp.csproj": {
+    "D:\\PTPMQL_02\\NewApp\\NewAp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PTPMQL_02\\NewAp\\NewAp.csproj",
+        "projectUniqueName": "D:\\PTPMQL_02\\NewApp\\NewAp.csproj",
         "projectName": "NewAp",
-        "projectPath": "D:\\PTPMQL_02\\NewAp\\NewAp.csproj",
+        "projectPath": "D:\\PTPMQL_02\\NewApp\\NewAp.csproj",
         "packagesPath": "C:\\Users\\XSTORE.COM.VN\\.nuget\\packages\\",
-        "outputPath": "D:\\PTPMQL_02\\NewAp\\obj\\",
+        "outputPath": "D:\\PTPMQL_02\\NewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\XSTORE.COM.VN\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -48,12 +53,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

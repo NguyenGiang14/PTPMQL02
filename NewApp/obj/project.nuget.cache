@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5XKORWOLh2Vg6T0nRt47tddB7FhwvPRI9tlO+dINVbP9nYTCy8XxPMRMV9RFcAh6gzZdwZrQuNwlQe9bVcnKbg==",
+  "dgSpecHash": "tFoX9CK3wDOCp2zYfPVaJrR13Qd20HzFjkmBrGgdcCGh9b6UqRUtP6TNzdSoZwINwOs7/xMwbzGC2OGaoNyitg==",
   "success": true,
-  "projectFilePath": "D:\\PTPMQL_02\\NewAp\\NewAp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\PTPMQL_02\\NewApp\\NewAp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\XSTORE.COM.VN\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\XSTORE.COM.VN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\XSTORE.COM.VN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\XSTORE.COM.VN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

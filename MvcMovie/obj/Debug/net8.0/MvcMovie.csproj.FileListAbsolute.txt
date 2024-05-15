@@ -276,3 +276,8 @@ D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.C
 D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\PTPMQL_02\MvcMovie\obj\Debug\net8.0\MvcMovie.csproj.AssemblyReference.cache
 D:\PTPMQL_02\MvcMovie\obj\Debug\net8.0\MvcMovie.csproj.Up2Date
+D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\EPPlus.dll
+D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\EPPlus.Interfaces.dll
+D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+D:\PTPMQL_02\MvcMovie\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\PTPMQL_02\MvcMovie\obj\Debug\net8.0\MvcMovie.MvcApplicationPartsAssemblyInfo.cs
