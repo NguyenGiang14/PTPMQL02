@@ -49,12 +49,32 @@
 
                 <td>
                     <a asp-action="Edit" asp-route-PersonId="@item.PersonId">Edit</a> |
-                    <a asp-action="Delete" asp-route-PersonId="@item.PersonId">Delete</a>
+                    <a asp-action="Delete" asp-route-PersonId="@item.PersonId">Delete</a>|
                 </td>
             </tr>
         }
     </tbody>
 </table>
-@Html.PagedListPager((IPagedList) Model, page => Url.Action("Index", new {page = page}),
-new X.PagedList.web.Common.PagedListRenderOptions { LiElementClasses = new string[] {"page-item"},
-  PageClasses = new string[] { "page-link" }})
+@using (Html.BeginForm("Index", "Person", FormMethod.Get, new {id = "form1"}))
+{
+    <div class= "row">
+        <div class="col-md-11">
+
+@Html.PagedListPager((IPagedList) Model, page => Url.Action("Index", new {page=page,
+pageSize= ViewBag.psize}),
+    new X.PagedList.Mvc.Core.PagedListRenderOptions { LiElementClasses = new string[] {"page-item"},
+    PageClasses = new string[] { "page-link" }})
+        </div>
+        <div class="col-md-1">
+            @Html.DropDownList("pageSize", null,new {@class="form-select"})
+        </div>
+    </div>
+}
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#pageSize").change(function(){
+            $("#forml").submit();
+        });
+    });
+</script>

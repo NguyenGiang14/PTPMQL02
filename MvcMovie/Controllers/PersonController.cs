@@ -1,5 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MvcMovie.Data;
@@ -21,35 +22,46 @@ namespace MvcMovie.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? page)
+        public async Task<IActionResult> Index(int? page,int?  PageSize)
         {
-            var model = _context.Person.ToList().ToPagedList(page ?? 1, 5);
+            ViewBag.PageSize = new List<SelectListItem>()
+            {
+                new SelectListItem() {Value="3", Text="3" },
+                new SelectListItem() {Value="5", Text="5" },
+                new SelectListItem() {Value="10", Text="10" },
+                new SelectListItem() {Value="15", Text="15" },
+                new SelectListItem() {Value="25", Text="25" },
+                new SelectListItem() {Value="50", Text="50" },
+            };
+            int pagesize = (PageSize ?? 3);
+            ViewBag.psize = pagesize;
+            var model = _context.Person.ToPagedList(page ?? 1, pagesize);
             return View(model);
+
         }
-        private bool PersonExists(string id)
-        {
-            return (_context.Person?.Any(e => e.PersonId ==id)).GetValueOrDefault();
-        }
-        public async Task<IActionResult> Index()
-        {
-            var model = await _context.Person.ToListAsync();
-        return View (model);
-        }
+            //     public async Task<IActionResult> Index()
+    //     {
+    //         var model = await _context.Person.ToListAsync();
+    //     return View (model);
+    //     }
       [HttpPost]
-      [ValidateAntiForgeryToken]
-      public async Task<IActionResult> Index(string KeySearch)
-      {
-        if(_context.Person.Count()==0)
-        {
-            return Problem("Enity set MvcMovieContext.Person is null");
-      }
-      var person =from m in _context.Person select m;
-        person = _context.Person.Where(s => s.FullName!.Contains(KeySearch));
-      return  View (await person.ToListAsync());
-        }
+       [ValidateAntiForgeryToken]
+       public async Task<IActionResult> Index(string KeySearch)
+       {
+         if(_context.Person.Count()==0)
+         {
+             return Problem("Enity set MvcMovieContext.Person is null");
+       }
+       var person =from m in _context.Person select m;
+         person = _context.Person.Where(s => s.FullName!.Contains(KeySearch));
+ return  View (await person.ToListAsync());
+         }
         public IActionResult Create()
         {
             return View ();
+        }      private bool PersonExists(string id)
+        {
+            return (_context.Person?.Any(e => e.PersonId ==id)).GetValueOrDefault();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
